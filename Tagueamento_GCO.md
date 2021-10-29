@@ -84,8 +84,8 @@ Uma sugestão, inclusive, seria a de criar uma nova vista, considerando a nova e
 
 Abaixo a documentação completa, contemplando os eventos mais relevantes de interação do site (incluindo correções na estrutura das dataLayer):
 
->## Globais
-
+># Globais
+&nbsp;
 >### Download de materiais
 
 Disparar imediatamente após o sucesso ou a falha no download de algum material no site. Blog, Materiais gratuitos etc.
@@ -151,7 +151,8 @@ dataLayer.push({
 });
 ```
 &nbsp;
->## Institucional
+># Institucional
+&nbsp;
 
 >### Institucional - Cabeçalho - Campo de Pesquisa
 
@@ -234,7 +235,8 @@ dataLayer.push({
 });
 ```
 &nbsp;
->## Institucional - Concursos
+># Institucional - Concursos
+&nbsp;
 
 >### Institucional - Concursos - Botão CTA - Interesse
 
@@ -262,8 +264,8 @@ dataLayer.push({
 });
 ```
 &nbsp;
->## Institucional - Assinatura Ilimitada
-
+># Institucional - Assinatura Ilimitada
+&nbsp;
 >### Institucional - Assinatura Ilimitada - Botão CTA - Interesse
 
 Disparar imediatamente após o clique em botões do interesse. Ex: Teste por 30 dias, Chat online, Atendimento pelo whastapp
@@ -290,8 +292,90 @@ dataLayer.push({
 });
 ```
 &nbsp;
->## Institucional - Aula grátis
 
+># Institucional - Material grátis
+
+&nbsp;
+
+<em>
+Obs: Para o preenchimento do formulario e sucesso/falha do download do material, deve-se considerar as dataLayers globais de download.
+</em>
+
+&nbsp;
+
+>## Institucional - Material grátis - Botão CTA - Interesse (filtro digitado)
+
+Disparar imediatamente após o usuário digitar algo no campo de busca na página de materiais. 
+```
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+ 'event': 'gaEvent',
+ 'eventCategory': 'Conteúdo - Institucional - Material grátis',
+ 'eventAction': 'Botão CTA - Interesse',
+ 'eventLabel': 'Botão: Buscou material'         //
+});
+```
+&nbsp;
+
+>## Institucional - Material grátis - Botão CTA - Interesse (filtro selecionado)
+
+Disparar imediatamente após o usuário selecionar um dos filtros no meno da esquerda. Ex: OAB, Magistratura, Juridica etc.
+```
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+ 'event': 'gaEvent',
+ 'eventCategory': 'Conteúdo - Institucional - Material grátis',
+ 'eventAction': 'Botão CTA - Interesse',
+ 'eventLabel': 'Botão: Buscou material - Filtro: {{filtro-selecionado}}'         // Ex: OAB, Magistratura, Juridica etc.
+});
+```
+&nbsp;
+
+>## Institucional - Material grátis - Botão CTA - Interesse (outros botões)
+
+Disparar imediatamente após o usuário digitar algo no campo de ver mais, chat etc.
+```
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+ 'event': 'gaEvent',
+ 'eventCategory': 'Conteúdo - Institucional - Material grátis',
+ 'eventAction': 'Botão CTA - Interesse',
+ 'eventLabel': 'Botão: {{nome-do-botao}}'         //ver mais, chat etc.
+});
+```
+&nbsp;
+
+>## Institucional - Material grátis - Botão CTA - Ação (material selecionado)
+
+Disparar imediatamente após o usuário selecionar um dos filtros no meno da esquerda. Ex: OAB, Magistratura, Juridica etc.
+```
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+ 'event': 'gaEvent',
+ 'eventCategory': 'Conteúdo - Institucional - Material grátis',
+ 'eventAction': 'Botão CTA - Ação',
+ 'eventLabel': 'Botão: Selecionou material - Material: {{nome-do-material}}'         // Ex: OAB – Manual Gran
+});
+```
+&nbsp;
+
+>## Institucional - Material grátis - Botão CTA - Ação (botões página do material)
+
+Disparar imediatamente após o clique em um dos botões nas páginas de materiais
+```
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+ 'event': 'gaEvent',
+ 'eventCategory': 'Conteúdo - Institucional - Material grátis',
+ 'eventAction': 'Botão CTA - Ação',
+ 'eventLabel': 'Botão: {{nome-do-botao}} - Material: {{nome-do-material}} //Trazer o nome do botão na pagina. Ex: Quero assinatura ilimitada agora ou Cursos para OAB e o nome do material.
+});
+```
+
+&nbsp;
+
+># Institucional - Aula grátis
+&nbsp;
 >### Institucional - Aula grátis - Botão CTA - Interesse
 
 Disparar imediatamente após o clique em botões do interesse. Ex: Data escolhida (Dia, mes, ano, semana), Anterior, Hoje, Proximo
@@ -318,8 +402,8 @@ dataLayer.push({
 });
 ```
 &nbsp;
->## Institucional - Aula ao vivo
-
+># Institucional - Aula ao vivo
+&nbsp;
 >### Institucional - Aula ao vivo - Campo pesquisa
 
 Disparar imediatamente após o usuário pesquisar algo nas aulas ao vivo
@@ -346,8 +430,8 @@ dataLayer.push({
 });
 ```
 &nbsp;
->## Institucional - Professor
-
+># Institucional - Professor
+&nbsp;
 >### Institucional - Professor - Campo pesquisa
 
 Disparar imediatamente após o usuário pesquisar algo nos professores
@@ -387,7 +471,8 @@ dataLayer.push({
 });
 ```
 &nbsp;
->## Institucional - CFC
+># Institucional - CFC
+&nbsp;
 
 >### Institucional - CFC - Botão CTA - Interesse
 
@@ -415,8 +500,8 @@ dataLayer.push({
 });
 ```
 &nbsp;
->## Institucional - Residência
-
+># Institucional - Residência
+&nbsp;
 >### Institucional - Residência - Botão CTA - Interesse
 
 Disparar imediatamente após o clique nos botões de interesse (exclusivo para Residência). Ex: Saiba mais, Pacotes, Cursos por materia, Carregar mais cursos
@@ -443,7 +528,8 @@ dataLayer.push({
 });
 ```
 &nbsp;
->## Institucional - Aprovados
+># Institucional - Aprovados
+&nbsp;
 
 >### Institucional - Aprovados - Botão CTA - Interesse
 
@@ -458,8 +544,8 @@ dataLayer.push({
 });
 ```
 &nbsp;
->## OAB
-
+># OAB
+&nbsp;
 >### OAB - Cabeçalho 
 
 Disparar imediatamente após o clique nos botões do menu (Materiais Gratuitos, Blog)
@@ -538,8 +624,8 @@ dataLayer.push({
 });
 ```
 &nbsp;
->## Redação
-
+># Redação
+&nbsp;
 >### Redação - Cabeçalho 
 
 Disparar imediatamente após o clique nos botões do menu (Como funciona, Professores, Planos e Login)
@@ -593,8 +679,8 @@ dataLayer.push({
 });
 ```
 &nbsp;
->## Pós
-
+># Pós
+&nbsp;
 >### Pós - Cabeçalho
 
 Disparar imediatamente após o clique nas opções do menu (Nossos Cursos, Professores,...)
@@ -661,8 +747,8 @@ dataLayer.push({
 ```
 &nbsp;
 
->## Blog
-
+># Blog
+&nbsp;
 >### Blog - Cabeçalho
 
 Disparar imediatamente após o clique nas opções do menu (Início, Últimas notícias,...)
@@ -782,74 +868,8 @@ dataLayer.push({
 });
 ```
 &nbsp;
->## Materiais
-
->### Materiais - Cabeçalho
-
-Disparar imediatamente após o clique nas opções do menu: Whatsapp , Carrinho, Ouvidoria, Entrar, Curso online, Professores, Ultimas noticias etc.
-```
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
- 'event': 'gaEvent',
- 'eventCategory': 'Conteúdo - Materiais',
- 'eventAction': 'Cabeçalho',
- 'eventLabel': 'Botão: {{nome-do-botão}}'  //Trazer botão do cabeçalho clicada pelo usuário: Ex: Whatsapp , Carrinho, Ouvidoria, Entrar, Curso online, Professores, Ultimas noticias etc.
-});
-```
+># Coaching
 &nbsp;
->### Materiais - Cabeçalho - Curso Online
-
-Disparar imediatamente após o clique nas opções do sub menu cursos online: Assinatura ilimitada, Por concurso, Por carreira (mais opções), Por estado etc.
-```
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
- 'event': 'gaEvent',
- 'eventCategory': 'Conteúdo - Materiais',
- 'eventAction': 'Cabeçalho',
- 'eventLabel': 'Botão: {{nome-do-botão}} - Curso: {{curso-escolhido}}'  //Trazer botão do cabeçalho clicada pelo usuário: Ex: Assinatura ilimitada, Por concurso, Por carreira (mais opções), Por estado etc.
-});
-```
-&nbsp;
->### Materiais - Cabeçalho - Campo de Pesquisa
-
-Disparar imediatamente após o usuário pesquisar algo
-```
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
- 'event': 'gaEvent',
- 'eventCategory': 'Conteúdo - Materiais',
- 'eventAction': 'Cabeçalho',
- 'eventLabel': 'Termo pesquisado: {{termo-pesquisado}}' //trazer o termo pesquisado
-});
-```
-&nbsp;
->### Materiais - Botão - CTA Interesse 
-
-Disparar imediatamente após o clique nos botões de interesses: Assine todo o site, Apostilas e e-Books, Editais verticalizados etc. (todos os botões)
-```
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
- 'event': 'gaEvent',
- 'eventCategory': 'Conteúdo - Materiais',
- 'eventAction': 'Botão CTA - Interesse',
- 'eventLabel': 'Botão: {{nome-do-botao}}'         //Trazer o nome do botão. Ex: Assine todo o site, Apostilas e e-Books, Editais verticalizados etc. (todos os botões)
-});
-```
-&nbsp;
->### Materiais - Botão - CTA Ação 
-
-Disparar imediatamente após o clique nos botões de ação e o item escolhido: Apostilas e e-Books - Guia de Estudo e Redação Sob Medida – Temas para o Banco do Brasil
-```
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
- 'event': 'gaEvent',
- 'eventCategory': 'Conteúdo - Materiais',
- 'eventAction': 'Botão CTA - Ação',
- 'eventLabel': 'Botão: {{nome-do-botao}} - Submenu {{nome-do-submenu}} - Material: {{nome do material}}'         //Trazer o nome do botão, submenu escolhido e o material selecionado. Ex: Apostilas e e-Books - Guia de Estudo e Redação Sob Medida – Temas para o Banco do Brasil
-```
-});
-&nbsp;
->## Coaching
 
 >### Coaching - Cabeçalho 
 
@@ -916,8 +936,8 @@ dataLayer.push({
 });
 ```
 &nbsp;
->## Questões
-
+># Questões
+&nbsp;
 >### Questões - Cabeçalho 
 
 Disparar imediatamente após o clique nos botões do menu (Provas, Questões, Concursos, Planos, Blog e Ajuda) ou após logado (inicio, programa de estudos, assuntos frequentes, disciplinas)
@@ -1036,13 +1056,15 @@ dataLayer.push({
 ```
 &nbsp;
 ># Enhanced Ecommerce
-
+&nbsp;
 Aqui estão listadas as estruturas de dados para coleta do sistema de ecommerce. Inconsistências nas nomenclaturas das chaves ou estrutura geral dos objetos resultará em falha na coleta, pois seguimos padrões esperados pelo Google Analytics.
 
 Caso tenham dúvidas, vocês podem usar os links abaixo como referência: https://developers.google.com/tag-manager/enhanced-ecommerce para a documentação e aqui um exemplo aplicado https://enhancedecommerce.appspot.com/
 
 &nbsp;
 >## Objeto de Produto
+
+&nbsp;
 
 O objeto de produto acompanha diversos disparos. Nessa seção explicamos melhor o objeto, mas ele consta como referência, e será listado novamente nos disparos onde estiver presente.
 
@@ -1164,6 +1186,8 @@ Quando as informações não estiverem disponíveis na página, deixar as variá
 &nbsp;
 >## Impressões de produto
 
+&nbsp;
+
 <em>
 Esses dados devem ser populados na variável de dataLayer antes da chamada do Google Tag Manager.
 </em>
@@ -1216,9 +1240,13 @@ Ponto a considerar, nas páginas de concursos, temos as opções de pacotes, cur
 
 &nbsp;
 >## Clique em produtos
+&nbsp;
+
 <em>
 Esse objeto de dados deve ser enviado no momento que um click for realizado em um produto listado.
 </em>
+
+&nbsp;
 
 Após esse push, o Google Tag Manager irá receber e gerar um payload para os servidores do Google Analytics. Utilizaremos no Google Tag Manager a funcionalidade de beacon dos navegadores para evitar perda de dados em caso de redirecionamento do usuário antes do envio dos dados para o Google. 
 
@@ -1233,6 +1261,7 @@ Aplicável a todos fluxos de compra - Assinatura Ilimitada, Cursos p/ Concursos,
 &nbsp;
 
 >### Product Click
+
 ```
 window.dataLayer = window.dataLayer || [];
 dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
@@ -1272,9 +1301,13 @@ dataLayer.push({
 ```
 
 >## Detalhes do produto
+&nbsp;
+
 <em>
 Esse disparo deve ocorrer no carregamento inicial da página de produto, ou seja, a página dedicada ao produto específico.
 </em>
+
+&nbsp;
 
 Documentação do google no [link - details](https://developers.google.com/tag-manager/enhanced-ecommerce?hl=pt_br#details)
 
@@ -1329,9 +1362,13 @@ Diferente do impression, que coleta os dados ao clicar nas abas, aqui queremos c
 &nbsp;
 
 >## Adicionar ou remover do Carrinho:
+&nbsp;
+
 <em>
 Esse disparo deve ocorrer quando o usuário adiciona ou remove produtos no carrinho.
 </em>
+
+&nbsp;
 
 Documentação do google no [link - addToCart](https://developers.google.com/tag-manager/enhanced-ecommerce#add)
 Documentação do google no [link - removeToCart](https://developers.google.com/tag-manager/enhanced-ecommerce#remove)
@@ -1341,6 +1378,7 @@ Aplicável a todos fluxos de compra - Assinatura Ilimitada, Cursos p/ Concursos,
 </em>
 
 &nbsp;
+
 >### Adicionar ao Carrinho:
 ```
 window.dataLayer = window.dataLayer || [];
@@ -1388,6 +1426,8 @@ dataLayer.push({
 ```
 &nbsp;
 >## Promotion (View e Click):
+&nbsp;
+
 >### Promotion (View):
 Esse disparo deve ocorrer quando carregarem os banners promocionais, principalmente na home.
 
@@ -1455,6 +1495,7 @@ dataLayer.push({
  ```
 &nbsp;
 >## Checkout
+&nbsp;
 
 Esse disparo deve ocorrer em diversos momentos do fluxo de checkout, variando apenas a chave step conforme tabela abaixo:
 
@@ -1500,6 +1541,8 @@ Temos quatro fluxos diferentes de checkout: Concursos (Cursos, OAB, Redação e 
 &nbsp;
 
 >## Sucesso de Compra:
+&nbsp;
+
 Deve ser disparada após o sucesso da compra.
 
 Documentação do Google no [link - purchase](https://developers.google.com/tag-manager/enhanced-ecommerce?hl=pt_br#purchases)
