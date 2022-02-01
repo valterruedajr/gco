@@ -1055,6 +1055,75 @@ dataLayer.push({
 });
 ```
 &nbsp;
+># Área do Aluno
+&nbsp;
+>### Área do Aluno - Cabeçalho - Termo de Pesquisa 
+
+Disparar imediatamente após a pesquisa do cabeçalho.
+```
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+ 'event': 'gaEvent',
+ 'eventCategory': 'Conteúdo - Área do Aluno',
+ 'eventAction': 'Cabeçalho', 
+ 'eventLabel': 'Termo de Pesquisa: {{nome-do-cta}}' //Trazer o termo pesquisado. Ex: Polícia Civil 
+});
+```
+&nbsp;
+
+>### Área do Aluno - Cabeçalho - Menu Perfil
+
+Disparar imediatamente após o clique nas opções do menu do perfil do aluno. Minha conta, perfil de estudo, formas de pagamento,...
+```
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+ 'event': 'gaEvent',
+ 'eventCategory': 'Conteúdo - Área do Aluno',
+ 'eventAction': 'Cabeçalho', 
+ 'eventLabel': 'Botão: {{opção-menu-clicada}}' //Trazer a opção clicada. Ex: Minha conta, perfil de estudo, formas de pagamento,... 
+});
+```
+&nbsp;
+>### Área do Aluno - Menu Conteúdo CTA Interesse 
+
+Disparar imediatamente após o clique em botões dentro do menu lateral à esquerda como 'Acessar todos os cursos', 'Lista de Cursos', 'Meus Cursos', 'adicionar um sonho',...
+```
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+ 'event': 'gaEvent',
+ 'eventCategory': 'Conteúdo - Área do Aluno',
+ 'eventAction': 'Menu Conteúdo CTA Interesse', 
+ 'eventLabel': 'Botão: {{nome-do-botão}} - Ambiente: {{nome-do-ambiente}}' //Trazer a opção clicada. Ex:  'Botão: Acessar todos os cursos - Ambiente: Início', 'Lishta de Cursos', 'Botão: Meus Cursos - Ambiente: Meus Certificados', 'Botão: adicionar um sonho' - Ambiente: Mural dos Sonhos,...
+});
+```
+&nbsp;
+>### Área do Aluno - Menu Conteúdo CTA Ação
+
+Disparar imediatamente após o clique nos botões 'Quero testar agora', "Quero Assinar agora', Download do APP, 'Quero ser Assinante','Upgrade para Assinatura'.
+```
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+ 'event': 'gaEvent',
+ 'eventCategory': 'Conteúdo - Área do Aluno',
+ 'eventAction': 'Menu Conteúdo CTA Ação', 
+ 'eventLabel': 'Botão: {{nome-do-botao}}' //Trazer a opção clicada. Ex:  'Quero testar agora', "Quero Assinar agora', Download do APP, 'Quero ser Assinante'.
+});
+```
+&nbsp;
+
+>### Área do Aluno - Rodapé - CTA
+
+Disparar imediatamente após o clique nos botões flutuantes do rodapé: Chat e pesquisa demográfica.
+```
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+ 'event': 'gaEvent',
+ 'eventCategory': 'Conteúdo - Área do Aluno',
+ 'eventAction': 'Rodapé - CTA', 
+ 'eventLabel': 'CTA: {{nome-do-cta}}' //Trazer a opção clicada. Ex:  Chat, Pesquisa demográfica.
+});
+```
+&nbsp;
 ># Enhanced Ecommerce
 &nbsp;
 Aqui estão listadas as estruturas de dados para coleta do sistema de ecommerce. Inconsistências nas nomenclaturas das chaves ou estrutura geral dos objetos resultará em falha na coleta, pois seguimos padrões esperados pelo Google Analytics.
