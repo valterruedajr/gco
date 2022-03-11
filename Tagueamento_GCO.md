@@ -1401,7 +1401,7 @@ dataLayer.push({
             'price': '1198.80',        // Preço do Produto
             'brand': 'GCO',
             'category': 'Assinatura Ilimitada',
-            'variant': 'Individual (AI)',
+            'variant': 'Assinatura 1 ano',
             'rendalimitada': 'sim', //customDimension3
             'genero': 'sim', //customDimension4
             'vagas': '301', //customDimension6
@@ -1463,7 +1463,7 @@ dataLayer.push({
         'price': '1198.80',         // Preço do Produto
         'brand': 'GCO',
         'category': 'Assinatura Ilimitada',
-        'variant': 'Individual (AI)',
+        'variant': 'Assinatura 1 ano',
         'quantity': 1,
        }]
     }
@@ -1486,7 +1486,7 @@ dataLayer.push({
         'price': '1198.80',         // Preço do Produto
         'brand': 'GCO',
         'category': 'Assinatura Ilimitada',
-        'variant': 'Individual (AI)',
+        'variant': 'Assinatura 1 ano',
         'quantity': 1
        }]
     }
@@ -1597,7 +1597,7 @@ dataLayer.push({
           'price': '1198.80',       // Preço do Produto
           'brand': 'GCO',
           'category': 'Assinatura Ilimitada',
-          'variant': 'Individual (AI)',
+          'variant': 'Assinatura 1 ano',
           'quantity': '1'
        }]
     }
@@ -1643,7 +1643,7 @@ dataLayer.push({
         'price': '1198.80',   // Preço do Produto
         'brand': 'GCO',
         'category': 'Assinatura Ilimitada',
-        'variant': 'Individual (AI)',
+        'variant': 'Assinatura 1 ano',
         'quantity': 1,
         'coupon': '',          // Campo opcional caso haja algum desconto no PRODUTO
         'rendalimitada': 'sim', //customDimension3
