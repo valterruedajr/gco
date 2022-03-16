@@ -559,19 +559,7 @@ dataLayer.push({
 });
 ```
 &nbsp;
->### OAB - Cabeçalho - Materiais gratuitos
 
-Disparar imediatamente após o clique no botões do menu Materiais Gratuitos e escolher um material para baixar
-```
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
- 'event': 'gaEvent',
- 'eventCategory': 'Conteúdo - OAB',
- 'eventAction': 'Cabeçalho',
- 'eventLabel': 'Material: {{nome-do-material}}'         //Trazer o nome do material escolhido. Ex:E-book gratuito - Mapa de Estudos para o XXVII Exame de Ordem
-});
-```
-&nbsp;
 >### OAB - Botão CTA - Interesse 
 
 Disparar imediatamente após o clique nos botões de interesse (Entrar, Faça o teste agora, Saiba mais)
